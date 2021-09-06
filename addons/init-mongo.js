@@ -26,5 +26,5 @@ function seed(dbName, user, password) {
   ]);
 }
 
-seed('kolyan-blog-db', 'kolyan-blog-db-user', 'kolyan');
-seed('kolyan-blog-test-db', 'kolyan-blog-test-db-user', 'kolyan');
+seed('kolyanblog', 'admin', 'kolyanblog');
+seed('kolyanblog-test-db', 'admin', 'kolyanblog');
