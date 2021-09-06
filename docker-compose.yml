@@ -2,8 +2,8 @@ version: '3.7'
 
 services:
   kolyan-blog-api:
-    image: ${REGISTRY}/freemoooont/kolyan-blog-api:master
-    container_name: kolyan-blog-api
+    image: ${REGISTRY}/freemoooont/blog-x:master
+    container_name: blog-x
     restart: unless-stopped
     ports:
       - '80:3000'
