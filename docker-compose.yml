@@ -29,8 +29,11 @@ services:
     ports:
       - '27017:27017'
     volumes:
-      - ./addons/init-mongo.js:/docker-entrypoint-initdb.d/init-mongo.js:ro
       - dbdata:/data/db
+
+networks:
+  app-network:
+    driver: bridge
 
 volumes:
   dbdata:
