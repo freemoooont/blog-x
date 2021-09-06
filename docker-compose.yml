@@ -5,7 +5,7 @@ services:
     image: ${REGISTRY}/freemoooont/blog-x:master
     container_name: blog-x
     restart: unless-stopped
-    entrypoint:
+    environment:
       PORT: 3000
       DB_NAME: mongo-blog
       DB_HOST: mongo-blog
