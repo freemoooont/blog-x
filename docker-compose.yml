@@ -9,13 +9,14 @@ services:
       PORT: 3000
       DB_NAME: mongo-blog
       DB_HOST: mongo-blog
-      DB_PORT: 21017
+      DB_PORT: 21018
       DB_USER: admin
       DB_USER_PWD: ${API_DB_PASSWORD}
     ports:
       - '80:3000'
     links:
       - mongo-blog
+    command: ./wait-for-it.sh mongo-blog:27018
 
   mongo-blog:
     image: mongo:4.2.5
@@ -26,7 +27,7 @@ services:
       - MONGO_INITDB_ROOT_PASSWORD=kolyanblog
       - MONGO_INITDB_DATABASE=kolyanblog
     ports:
-      - '27017:27017'
+      - '27018:27018'
     volumes:
       - ./addons/init-mongo.js:/docker-entrypoint-initdb.d/init-mongo.js:ro
       - dbdata:/data/db
