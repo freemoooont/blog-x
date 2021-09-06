@@ -10,9 +10,9 @@ services:
     links:
       - mongo
 
-  mongo:
+  mongo-blog:
     image: mongo:4.2.5
-    container_name: mongo
+    container_name: mongo-blog
     restart: unless-stopped
     environment:
       - MONGO_INITDB_ROOT_USERNAME=admin
