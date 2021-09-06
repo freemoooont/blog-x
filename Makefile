@@ -12,6 +12,6 @@ deploy:
 	ssh -o StrictHostKeyChecking=no admin@${HOST} -p ${PORT} 'cd site_${BUILD_NUMBER} && echo "IMAGE_TAG=${IMAGE_TAG}" >> .env'
 	ssh -o StrictHostKeyChecking=no admin@${HOST} -p ${PORT} 'cd site_${BUILD_NUMBER} && echo "API_DB_PASSWORD=${API_DB_PASSWORD}" >> .env'
 	ssh -o StrictHostKeyChecking=no admin@${HOST} -p ${PORT} 'cd site_${BUILD_NUMBER} && sudo docker-compose pull'
-	ssh -o StrictHostKeyChecking=no admin@${HOST} -p ${PORT} 'cd site_${BUILD_NUMBER} && docker-compose up --build --remove-orphans -d'
+	ssh -o StrictHostKeyChecking=no admin@${HOST} -p ${PORT} 'cd site_${BUILD_NUMBER} && sudo docker-compose up --build --remove-orphans -d'
 	ssh -o StrictHostKeyChecking=no admin@${HOST} -p ${PORT} 'rm -f site'
 	ssh -o StrictHostKeyChecking=no admin@${HOST} -p ${PORT} 'ln -sr site_${BUILD_NUMBER} site'
