@@ -19,7 +19,7 @@ services:
     command: ./wait-for-it.sh mongo-blog:27018
 
   mongo-blog:
-    image: mongo:4.2.5
+    image: mongo
     container_name: mongo-blog
     restart: unless-stopped
     environment:
