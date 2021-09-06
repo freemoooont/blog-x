@@ -48,6 +48,7 @@ jobs:
       -   name: Deploy
           run: make deploy
           env:
+            PRODUCTION_KEY: ${{secrets.PRODUCTION_KEY}}
             IMAGE_TAG: ${{ steps.meta.outputs.tags }}
             BUILD_NUMBER: ${GITHUB_RUN_NUMBER}
             registry: ${{ env.REGISTRY }}
