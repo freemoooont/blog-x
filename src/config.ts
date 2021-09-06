@@ -14,8 +14,8 @@ export const corsUrl = process.env.CORS_URL || '*';
 export const tokenInfo = {
     accessTokenValidityDays: parseInt(process.env.ACCESS_TOKEN_VALIDITY_SEC || '30'),
     refreshTokenValidityDays: parseInt(process.env.REFRESH_TOKEN_VALIDITY_SEC || '120'),
-    issuer: process.env.TOKEN_ISSUER || 'localhost',
-    audience: process.env.TOKEN_AUDIENCE || 'localhost',
+    issuer: process.env.TOKEN_ISSUER || 'blog-x',
+    audience: process.env.TOKEN_AUDIENCE || 'blog-x',
 };
 
 export const logDirectory = process.env.LOG_DIR;
