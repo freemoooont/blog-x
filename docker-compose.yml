@@ -16,7 +16,7 @@ services:
       - '80:3000'
     links:
       - mongo-blog
-    command: sudo ./wait-for-it.sh mongo-blog:27018
+    command: ./wait-for-it.sh mongo-blog:27018
 
   mongo-blog:
     image: mongo:4.2.5
