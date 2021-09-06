@@ -4,8 +4,6 @@ USER node
 
 RUN mkdir -p /home/node/app && chown -R node:node /home/node/app
 
-RUN ["chmod", "+x", "/usr/local/bin/docker-entrypoint.sh"]
-
 # setting working directory in the container
 WORKDIR /home/node/app
 
