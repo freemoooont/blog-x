@@ -6,12 +6,12 @@ services:
     container_name: blog-x
     restart: unless-stopped
     entrypoint:
-      - NODE_ENV: development
+      - NODE_ENV: 'development'
       - PORT: 3000
-      - DB_NAME: mongo-blog
-      - DB_HOST: mongo-blog
+      - DB_NAME: 'mongo-blog'
+      - DB_HOST: 'mongo-blog'
       - DB_PORT: 21017
-      - DB_USER: admin
+      - DB_USER: 'admin'
       - DB_USER_PWD: ${API_DB_PASSWORD}
     ports:
       - '80:3000'
